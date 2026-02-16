@@ -1,0 +1,62 @@
+/*
+main: #8521dc
+lighter: #bb55ec
+lightest: #e39bf6
+darker: #430ba2
+darkest: #130268
+background: #080612
+text: #f1e6f3
+*/
+
+@font-face {
+    font-family: "Terminus";
+    src: url("/fonts/TerminusTTF.woff") format("woff");
+}
+
+header {
+    background-color: #8521dc;
+    font-size: larger;
+    color: #f1e6f3;
+}
+
+body {
+    max-width: 600px;
+    margin: auto;
+    padding: 0px 5%;
+    font-size: 18px/1.5;
+    font-family: 'Helvetica', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: lowercase;
+    color: #f1e6f3;
+    background-color: #080612;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: none;
+}
+
+h1,
+h2 {
+    font-family: "Terminus";
+    margin-bottom: 0%;
+}
+
+sub {
+    font-variant: small-caps;
+    margin-top: 0%;
+}
+
+a {
+    color: #bb55ec;
+}
+
+a:hover {
+    color: #e39bf6;
+}
+
+a:visited {
+    color: #430ba2;
+}
+
+.dictionary {
+    margin: 5%;
+    line-height: 10%;
+}
