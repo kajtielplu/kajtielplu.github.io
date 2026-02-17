@@ -1,12 +1,4 @@
-/*
-main: #8521dc
-lighter: #bb55ec
-lightest: #e39bf6
-darker: #430ba2
-darkest: #130268
-background: #080612
-text: #f1e6f3
-*/
+/*lighter green: #8ba577*/
 
 @font-face {
     font-family: "Terminus";
@@ -14,9 +6,9 @@ text: #f1e6f3
 }
 
 header {
-    background-color: #8521dc;
+    background-color: #4c5a41;
+    color: #4e3b2d;
     font-size: larger;
-    color: #f1e6f3;
 }
 
 body {
@@ -24,10 +16,10 @@ body {
     margin: auto;
     padding: 0px 5%;
     font-size: 18px/1.5;
-    font-family: 'Helvetica', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Noto Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-transform: lowercase;
-    color: #f1e6f3;
-    background-color: #080612;
+    color: #83795d;
+    background-color: #1d1c1f;
     -webkit-font-smoothing: none;
     -moz-osx-font-smoothing: grayscale;
     font-smooth: none;
@@ -45,15 +37,16 @@ sub {
 }
 
 a {
-    color: #bb55ec;
+    color: #4e3b2d;
 }
 
 a:hover {
-    color: #e39bf6;
+    color: #b18666;
 }
 
-a:visited {
-    color: #430ba2;
+blockquote {
+    border-left: 3px solid #d2cae0;
+    padding-left: 2%;
 }
 
 .dictionary {
