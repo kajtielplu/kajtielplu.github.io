@@ -53,9 +53,6 @@ body {
     text-transform: lowercase;
     color: #83795d;
     background-color: #1d1c1f;
-    -webkit-font-smoothing: none;
-    -moz-osx-font-smoothing: grayscale;
-    font-smooth: none;
 }
 
 h1,
@@ -63,6 +60,9 @@ h2 {
     font-family: "Terminus";
     margin-bottom: 0%;
     margin-top: 0%;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: none;
 }
 
 sub {
