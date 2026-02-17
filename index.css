@@ -5,18 +5,42 @@
     src: url("/fonts/TerminusTTF.woff") format("woff");
 }
 
+/*https://petermolnar.net/article/how-to-make-a-print-css*/
+@media print {
+    * {
+        background-color: #fff !important;
+        color: #000 !important;
+        font-size: 11pt !important;
+        font-family: Arial, Helvetica, sans-serif !important;
+    }
+    
+    @page {
+        margin: 2cm;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid !important;
+    }
+
+    p, li, blockquote, figure, img {
+        page-break-inside: avoid !important;
+    }
+}
+
 header {
     background-color: #4c5a41;
     color: #4e3b2d;
     font-size: larger;
+    position: sticky;
+    top: 0;
 }
 
 body {
-    max-width: 600px;
-    margin: auto;
-    padding: 0px 5%;
+    max-width: 700px;
+    padding: 0 2%;
+    margin: 0px auto; 
     font-size: 18px/1.5;
-    font-family: 'Noto Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Noto Sans', 'Arial', 'Helvetica', sans-serif;
     text-transform: lowercase;
     color: #83795d;
     background-color: #1d1c1f;
@@ -29,6 +53,7 @@ h1,
 h2 {
     font-family: "Terminus";
     margin-bottom: 0%;
+    margin-top: 0%;
 }
 
 sub {
@@ -38,6 +63,7 @@ sub {
 
 a {
     color: #4e3b2d;
+    text-decoration-line: none;
 }
 
 a:hover {
@@ -61,4 +87,30 @@ blockquote {
 .dictionary {
     margin: 5%;
     line-height: 10%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.lang {
+    p {
+        display: flex;
+        flex-direction: column;
+        max-width: fit-content;
+        /*text-align: right;*/
+    }
+
+    p a:first-of-type {
+        display: block;
+    }
+
+    p a {
+        display: none;
+    }
+
+    p:hover a {
+        display: block;
+    }
 }
