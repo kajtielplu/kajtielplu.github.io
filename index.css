@@ -94,7 +94,7 @@ a[href^="http"]::after {
 }
 
 blockquote {
-    border-left: 3px solid #b18666;
+    border-left: 3px solid #d2cae0;
     padding-left: 2%;
 }
 
@@ -111,25 +111,4 @@ blockquote {
 .grid {
     display: grid;
     grid-template-columns: auto auto;
-}
-
-.lang {
-    p {
-        display: flex;
-        flex-direction: column;
-        max-width: fit-content;
-        /*text-align: right;*/
-    }
-
-    p a:first-of-type {
-        display: block;
-    }
-
-    p a {
-        display: none;
-    }
-
-    p:hover a {
-        display: block;
-    }
 }
