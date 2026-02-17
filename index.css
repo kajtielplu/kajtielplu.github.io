@@ -13,16 +13,25 @@
         font-size: 11pt !important;
         font-family: Arial, Helvetica, sans-serif !important;
     }
-    
+
     @page {
         margin: 2cm;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         page-break-after: avoid !important;
     }
 
-    p, li, blockquote, figure, img {
+    p,
+    li,
+    blockquote,
+    figure,
+    img {
         page-break-inside: avoid !important;
     }
 }
@@ -38,7 +47,7 @@ header {
 body {
     max-width: 700px;
     padding: 0 2%;
-    margin: 0px auto; 
+    margin: 0px auto;
     font-size: 18px/1.5;
     font-family: 'Noto Sans', 'Arial', 'Helvetica', sans-serif;
     text-transform: lowercase;
@@ -71,7 +80,7 @@ a:hover {
 }
 
 a[href^="http"]::after {
-    content: "↗";    
+    content: "↗";
 }
 
 blockquote {
