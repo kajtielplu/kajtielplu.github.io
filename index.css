@@ -44,9 +44,18 @@ a:hover {
     color: #b18666;
 }
 
+a[href^="http"]::after {
+    content: "↗";    
+}
+
 blockquote {
     border-left: 3px solid #d2cae0;
     padding-left: 2%;
+}
+
+::selection {
+    color: #d2cae0;
+    background-color: #4c5a41;
 }
 
 .dictionary {
