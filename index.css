@@ -1,5 +1,9 @@
 /*lighter green: #8ba577*/
 
+:root {
+    color-scheme: light dark;
+}
+
 @font-face {
     font-family: "Terminus";
     src: url("/fonts/TerminusTTF.woff") format("woff");
@@ -37,8 +41,8 @@
 }
 
 header {
-    background-color: #4c5a41;
-    color: #1d1c1f;
+    background-color: light-dark(black, #4c5a41);
+    color: light-dark(white, #1d1c1f);
     font-size: larger;
     position: sticky;
     top: 0;
@@ -52,7 +56,7 @@ header h1 {
 
 body {
     margin: 0px;
-    background-color: #1d1c1f;
+    background-color: light-dark(white, #1d1c1f);
 }
 
 section {
@@ -62,7 +66,7 @@ section {
     font-size: 18px/1.5;
     font-family: 'Noto Sans', 'Arial', 'Helvetica', sans-serif;
     text-transform: lowercase;
-    color: #83795d;
+    color: light-dark(black, #83795d);
 }
 
 h1,
@@ -81,12 +85,12 @@ sub {
 }
 
 a {
-    color: #4e3b2d;
+    color: light-dark(grey, #4e3b2d);
     text-decoration-line: none;
 }
 
 a:hover {
-    color: #b18666;
+    color: light-dark(black, #b18666);
 }
 
 a[href^="http"]::after {
@@ -94,14 +98,14 @@ a[href^="http"]::after {
 }
 
 blockquote {
-    border-left: 3px solid #d2cae0;
+    border-left: 3px solid light-dark(black, #d2cae0;)
     padding-left: 2%;
     text-align: justify;
 }
 
 ::selection {
-    color: #d2cae0;
-    background-color: #4c5a41;
+    color: light-dark(white, #d2cae0;)
+    background-color: light-dark(black, #4c5a41);
 }
 
 .dictionary {
