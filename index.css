@@ -109,6 +109,10 @@ blockquote {
     line-height: 10%;
 }
 
+.dictionary li:first-of-type {
+        padding-bottom: 3.5%;
+    }
+
 .grid {
     display: grid;
     grid-template-columns: auto auto;
