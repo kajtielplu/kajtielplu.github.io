@@ -98,13 +98,13 @@ a[href^="http"]::after {
 }
 
 blockquote {
-    border-left: 3px solid light-dark(black, #d2cae0;)
+    border-left: 3px solid light-dark(black, #d2cae0);
     padding-left: 2%;
     text-align: justify;
 }
 
 ::selection {
-    color: light-dark(white, #d2cae0;)
+    color: light-dark(white, #d2cae0);
     background-color: light-dark(black, #4c5a41);
 }
 
