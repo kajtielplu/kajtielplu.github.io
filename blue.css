@@ -1,0 +1,131 @@
+:root {
+    color-scheme: light dark;
+    --kaiju-blue: #1E22AA;
+    --darkest: hsl(from var(--kaiju-blue) calc(h - 30) calc(s + 40) calc(l - 40));
+    --darker: hsl(from var(--kaiju-blue) calc(h - 20) calc(s + 20) calc(l - 20));
+    --dark: hsl(from var(--kaiju-blue) calc(h - 10) calc(s + 10) calc(l - 10));
+    --light: hsl(from var(--kaiju-blue) calc(h + 10) calc(s - 10) calc(l + 10));
+    --lighter: hsl(from var(--kaiju-blue) calc(h + 20) calc(s - 20) calc(l + 20));
+    --lightest: hsl(from var(--kaiju-blue) calc(h + 30) calc(s - 40) calc(l + 40));
+}
+
+@font-face {
+    font-family: "Terminus";
+    src: url("/fonts/TerminusTTF.woff") format("woff");
+}
+
+/*https://petermolnar.net/article/how-to-make-a-print-css*/
+@media print {
+    * {
+        background-color: #fff !important;
+        color: #000 !important;
+        font-size: 11pt !important;
+        font-family: Arial, Helvetica, sans-serif !important;
+    }
+
+    @page {
+        margin: 2cm;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        page-break-after: avoid !important;
+    }
+
+    p,
+    li,
+    blockquote,
+    figure,
+    img {
+        page-break-inside: avoid !important;
+    }
+}
+
+header {
+    background-color: light-dark(black, var(--kaiju-blue));
+    color: light-dark(white, black);
+    font-size: larger;
+    position: sticky;
+    top: 0;
+}
+
+header h1 {
+    max-width: 706px;
+    padding: 0 7px;
+    margin: 0px auto;
+}
+
+header h1::selection {
+    color: var(--lightest);
+}
+
+body {
+    margin: 0px;
+    background-color: light-dark(white, var(--darkest));
+}
+
+section {
+    max-width: 700px;
+    padding: 0 10px;
+    margin: 0px auto;
+    font-size: 18px/1.5;
+    font-family: 'Noto Sans', 'Arial', 'Helvetica', sans-serif;
+    text-transform: lowercase;
+    color: light-dark(black, var(--lightest));
+}
+
+h1,
+h2 {
+    font-family: "Terminus";
+    margin-bottom: 0%;
+    margin-top: 0%;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: none;
+}
+
+sub {
+    font-variant: small-caps;
+    margin-top: 0%;
+}
+
+a {
+    color: light-dark(grey, var(--light));
+    text-decoration-line: none;
+}
+
+a:hover {
+    color: light-dark(black, var(--lighter));
+}
+
+a[href^="http"]::after {
+    content: "↗";
+}
+
+blockquote {
+    border-left: 3px solid light-dark(black, var(--light));
+    padding-left: 10px;
+    text-align: justify;
+}
+
+::selection {
+    color: light-dark(white, var(--darkest));
+    background-color: light-dark(black, var(--light));
+}
+
+.dictionary {
+    margin: 40px;
+    line-height: 1pt;
+}
+.dictionary li {
+    line-height: 18pt;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+}
